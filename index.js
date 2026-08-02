@@ -80,7 +80,7 @@ try {
     `Counter_svg_commit.svg?v=${Date.now()}`,
   );
 
-  await fs.writeFile(readmePath, readme, "utf-8");
+  await fs.writeFile("README.md", readme, "utf-8");
   console.log("SVG et README mis à jour avec succès !");
 } catch (err) {
   console.log(
