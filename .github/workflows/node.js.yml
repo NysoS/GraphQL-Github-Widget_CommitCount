@@ -50,7 +50,10 @@ jobs:
 
           git push
 
-      - name: Purger le cache Camo de GitHub
-        uses: gitsick/action-camo-purge@v1
-        with:
-          camo_url: https://raw.githubusercontent.com/NysoS/GraphQL-Github-Widget_CommitCount/main/Counter_svg_commit.svg
+      - name: Purger le cache Camo (Sans action externe)
+        run: |
+          URL="https://raw.githubusercontent.com/NysoS/GraphQL-Github-Widget_CommitCount/main/Counter_svg_commit.svg"
+          HEX=$(echo -n "$URL" | xxd -p | tr -d '\n')
+          CAMO_URL="https://camo.githubusercontent.com/$HEX"
+          echo "Purge de $CAMO_URL"
+          curl -s -X PURGE "$CAMO_URL"
