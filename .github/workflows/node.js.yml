@@ -49,3 +49,8 @@ jobs:
           git commit -m "chore: auto-update Counter_svg_commit.svg [skip ci]" || exit 0
 
           git push
+
+      - name: Purger le cache Camo de GitHub
+        uses: cuchi/camo-purge-action@v1
+        with:
+          camo_url: https://raw.githubusercontent.com/NysoS/GraphQL-Github-Widget_CommitCount/main/Counter_svg_commit.svg

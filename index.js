@@ -70,20 +70,3 @@ try {
   console.error("Le script a planté avant ou pendant l'écriture du SVG :", e);
   process.exit(1);
 }
-
-try {
-  let readme = await fs.readFile("README.md", "utf-8");
-
-  // Remplace la valeur de ?v= par le timestamp actuel dans l'URL du README
-  readme = readme.replace(
-    /Counter_svg_commit\.svg(\?v=\d+)?/g,
-    `Counter_svg_commit.svg?v=${Date.now()}`,
-  );
-
-  await fs.writeFile("README.md", readme, "utf-8");
-  console.log("SVG et README mis à jour avec succès !");
-} catch (err) {
-  console.log(
-    "Pas de README.md trouvé à la racine, SVG mis à jour uniquement.",
-  );
-}
