@@ -65,4 +65,11 @@ try {
   });
   const newSvgContent = builder.buildObject(jsonRes);
   await fs.writeFile("Counter_svg_commit.svg", newSvgContent);
-} catch (e) {}
+  console.log(`Fichier généré avec succès à : ${outputPath}`);
+} catch (e) {
+  console.error(
+    "Le script a planté avant ou pendant l'écriture du SVG :",
+    error,
+  );
+  process.exit(1);
+}
