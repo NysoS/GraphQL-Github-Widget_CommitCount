@@ -67,9 +67,6 @@ try {
   await fs.writeFile("Counter_svg_commit.svg", newSvgContent);
   console.log(`Fichier généré avec succès à : ${outputPath}`);
 } catch (e) {
-  console.error(
-    "Le script a planté avant ou pendant l'écriture du SVG :",
-    error,
-  );
+  console.error("Le script a planté avant ou pendant l'écriture du SVG :", e);
   process.exit(1);
 }
