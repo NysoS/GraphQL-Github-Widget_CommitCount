@@ -7,7 +7,7 @@ const { user } = await graphql(
   `
     {
       user(login: "NysoS") {
-        repositories(last: 25) {
+        repositories(last: 50) {
           nodes {
             name
             devRef: ref(qualifiedName: "dev") {
