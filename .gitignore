@@ -66,6 +66,7 @@ web_modules/
 .yarn-integrity
 
 *.svg
+*.*.svg
 
 # dotenv environment variable files
 .env
