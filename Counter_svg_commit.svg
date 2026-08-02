@@ -14,7 +14,7 @@
   <rect width="36" height="18" rx="4" fill="#3E8810"/>
   <rect x="82" width="78" height="18" rx="4" fill="#61665E"/>
   <rect x="82" width="36" height="18" rx="4" fill="#C2951B"/>
-  <text id="mainValue" x="4" y="13" class="text-title">892</text>
+  <text id="mainValue" x="4" y="13" class="text-title">895</text>
   <text x="43" y="13" class="text-title">Main</text>
   <text id="devValue" x="86" y="13" class="text-title">1280</text>
   <text x="125" y="13" class="text-title">Dev</text>
