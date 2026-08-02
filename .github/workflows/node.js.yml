@@ -30,6 +30,6 @@ jobs:
       run: npm ci
       
     - name: Exec
-      run: npm run dev --if-present
       env:
         TOKEN: ${{ secrets.TOKEN }}
+      run: npm run dev --if-present
