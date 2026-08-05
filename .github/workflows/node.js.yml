@@ -8,7 +8,7 @@ on:
     branches: ["main"]
   # Permet d'exécuter la CI à intervalle régulier (ex: tous les jours à minuit)
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 1 * *"
   # Permet de lancer le workflow manuellement depuis GitHub
   workflow_dispatch:
 jobs:
